@@ -1,0 +1,537 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'poppins', Montserrat; */
+}
+
+body{
+    background: #f8f8f8;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.nav-container{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.content{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+
+.left-content p{
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.left-content b{
+    color: #d4af37;
+    font-weight: 700;
+}
+
+/* Navigation */
+.nav-links{
+    display: flex;
+    gap: 45px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    position: relative;
+    transition: .3s;
+}
+
+/* Aniamted Underline */
+
+.nav-links a::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    transition: .3s;
+}
+
+.nav-links a:hover{
+    color: #d4af37;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+/* Button */
+
+.right-content button{
+    padding: 13px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.right-content button:hover{
+    background: #d4af37;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+    .content {
+        height: 70px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .left-content p {
+        font-size: 1.3rem;
+    }
+    .right-content button {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+}
+
+/* HERO */
+.hero{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url("images/hero.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    backgroung-repeat:no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 8%;
+    color: white;
+}
+
+/* Small Heading */
+
+.hero h3{
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #d4af37;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Main Heading */
+
+.hero h1{
+    font-size: 5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero span{
+    color: #d4af37;
+}
+
+/* Paragraph */
+
+.hero p{
+    width: 650px;
+    max-width: 100%;
+    font-size: 18px;
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Button */
+
+.hero-buttons{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* first Button */
+.hero-buttons button:first-child{
+    padding: 15px 35px;
+    border: none;
+    border-radius: 40px;
+    background: #d4af37;
+    color: #111;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero-buttons button:first-child:hover{
+    transform:translateY(-3px);
+    background: white;
+}
+
+/* Second Button */
+.hero-buttons button:last-child{
+    padding: 15px 35px;
+    border: 2px solid white;
+    border-radius: 40px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero-buttons button:last-child:hover{
+    background: white;
+    color: #111;
+}
+
+/* Horizontal Line */
+
+.hero hr{
+    margin-top: 70px;
+    width: 120px;
+    border: 2px solid #d4af37;
+}
+
+/* url("images/hero.jpg") */
+@media (max-width:768px) {
+
+.hero {
+    text-align: center;
+    align-items: center;
+    padding: 120px 30px 60px;
+}
+
+.hero h3 {
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.hero-buttons buttons {
+    width: 100%;
+}
+
+.hero hr {
+    width: 60px auto 0;
+}
+
+}
+
+/* SERVICES */
+
+.services{
+    padding: 80px 8%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.services h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.subtitle{
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* .service-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr);
+    gap: 30px;
+} */
+
+.card{
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card h3{
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.card p{
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.card h4{
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+    transition: .3s;
+}
+
+.btn:hover{
+    background: #d4af37;
+    color: #000;
+}
+
+/* PRICING */
+
+.pricing{
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.pricing-head{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-header h2{
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color:#111;
+}
+
+.pricing-header p{
+    color: #666;
+    line-height: 1.8;
+}
+
+.deposit-note{
+    margin-top: 10px;
+    color: #b8860b;
+    font-weight: 600;
+}
+
+/* Table */
+
+.pricing-table{
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+/* Header */
+.table-header{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    background: #111;
+    color: white;
+    font-weight: 600;
+}
+
+.table-header div{
+    padding: 22px;
+}
+
+/* Rows */
+.table-row{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    align-items: center;
+    background: white;
+    transition: 3s;
+}
+
+.table-row div{
+    padding: 22px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Alternate Rows */
+.table-row:nth-child(even){
+    background: #fafafa;
+}
+
+/* Hover */
+.table-row:hover{
+    background: #f8f2f8;
+}
+
+/* Deposit */
+.table-row div:last-child{
+    color: #b8860b;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+@media (max-width:768px) {
+
+    .table-header{
+        display: none;
+    }
+
+    .table-row{
+        grid-template-columns: 1fr;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    }
+
+    .table-row div{
+        padding: 18px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .table-row div:nth-child(1)::before{
+        content: "service";
+        display: block;
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 5px;
+    }
+
+    .table-row div:nth-child(2)::before{
+        content:"Duration";
+        display: block;
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 5px;
+    }
+
+    .table-row div:nth-child(3)::before{
+        content:"Deposit";
+        display: block;
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 5px;
+    }
+
+}
+
+/* FOOTER */
+.footer{
+    background: #111;
+    color: #fff;
+    padding: 70px 8% 30px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-box h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.footer-box h3{
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.footer-box h4{
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.footer-box p{
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer-box a{
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 3s;
+}
+
+.footer-box a:hover{
+    color: #fff;
+    padding-left: 5px;
+}
+
+.footer hr{
+    border: none;
+    height: 1px;
+    background: #a19292;
+    margin: 40px 0 20px;
+}
+
+.footer-bottom{
+    text-align: center;
+}
+
+.footer-bottom p{
+    color: #aaa;
+}
+
+@media (max-width:768px) {
+    .footer{
+        text-align: center;
+    }
+
+    .footer-box{
+        margin: 20px;
+    }
+
+    .footer-box a:hover{
+        padding-left: 0;
+    }
+
+} 

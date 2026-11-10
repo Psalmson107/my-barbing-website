@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f6f2;
+    color: #111;
+    /* overflow-x: hidden; */
+} 
+
+/* NAVBAR */
+.nav-container{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.content{
+    width: 90%;
+    max-width: 1200px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-content p{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.left-content b{
+    color: #b58b2a;
+}
+
+.nav-links{
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #b58b2a;
+}
+
+.right-content button{
+    padding: 12px 25px; 
+    border: none;
+    border-radius: 30px;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.right-content button:hover{
+    background: #b58b2a;
+    color: #111;
+}
+
+@media (max-width:768px) {
+    .content {
+        height: 70px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .left-content p {
+        font-size: 1.3rem;
+    }
+    .right-content button {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+}
+
+/* SERVICES HERO */
+.Services-hero{
+    min-width: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("images/logo2.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.Services-hero-content p{
+    color: #d4af37;
+    letter-spacing: 5px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.Services-hero h1{
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.Services-hero h1 span{
+    color: #d4af37;
+}
+
+.Services-hero h3{
+    font-weight: 400;
+    color: #ddd;
+}
+
+/* SECTION HEADING */
+.services-section{
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading p{
+    color: #b58b2a;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section-heading span{
+    color: #777;
+    line-height: 1.7;
+}
+
+/* SERVICE GRID */
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* SERVICE CARD */
+.service-card{
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.service-image{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.service-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.service-card:hover img{
+    transform: scale(1.05);
+}
+
+/* Information */
+.service-info{
+    padding: 25px;
+}
+
+.service-info h3{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.service-info p{
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-info a{
+    text-decoration: none;
+    color: #b58b2a;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.service-info a:hover{
+    color: #111;
+}
+
+/* CTA */
+.service-cta{
+    text-align: center;
+    background: #111;
+    color: #fff;
+    padding: 80px 20px;
+}
+
+.service-cta h2{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.service-cta p{
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.service-cta a{
+    display: inline-block;
+    padding: 14px 30px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.service-cta a:hover{
+    background: #fff;
+}
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .content {
+        height: 70px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    } 
+
+    .service-image {
+        height: 280px;
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .section-cta h2 {
+        font-size: 2rem;
+    }
+}
